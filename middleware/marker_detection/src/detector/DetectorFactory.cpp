@@ -10,7 +10,7 @@
 #include <map>
 #include "AbstractDetector.cpp"
 #include "AprilDetector.cpp"
-#include "DotsDetector.cpp"
+// #include "DotsDetector.cpp"
 
 class DetectorFactory {
 
@@ -27,7 +27,7 @@ public:
      * This probably uses more memory than it should, but it's easier coding :)
      */
     detectors["APRIL"]  = new AprilDetector();
-    detectors["DOTS"]   = new DotsDetector();
+    // detectors["DOTS"]   = new DotsDetector();
   }
 
 
