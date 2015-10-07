@@ -22,7 +22,6 @@
 #include <nav_msgs/Odometry.h>
 #include <cv_bridge/cv_bridge.h>
 #include <sensor_msgs/image_encodings.h>
-#include <ardrone_autonomy/Navdata.h>
 
 #include <tf/transform_broadcaster.h>
 
