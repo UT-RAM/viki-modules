@@ -1,0 +1,33 @@
+<!-- AEROWORKS -->
+
+<!-- 
+This module file enables the command vel merge package. Package is included in the same folder as this file. Symlink it to your catkin workspace and catkin_make to run it.
+-->
+<module type="middleware" id="cmd_vel_merge">
+    <meta>
+        <name>command velocity merge</name>
+        <description>Merge two topics containing twist messages into one. Uses linear part from one topic, angular part from the other topic.</description>
+        <author>Alex Kamphuis</author>
+        <icon>glyphicon-plus-sign</icon>
+    </meta>
+
+    <inputs>
+        <input type="ros_topic" name="input_linear" link="cmd_vel_merge/input_linear" message_type="geometry_msgs/Twist" required="false" />
+        <input type="ros_topic" name="input_angular" link="cmd_vel_merge/input_angular" message_type="geometry_msgs/Twist" required="false" />
+    </inputs>
+
+    <outputs>
+        <output type="ros_topic" name="out" link="cmd_vel_merge/merged_output" message_type="geometry_msgs/Twist" required="false" />
+    </outputs>
+
+    <executable id="cmd_vel_merge" pkg="cmd_vel_merge" exec="merge.py">
+        <inputs>
+            <input type="ros_topic" name="input_linear" message_type="geometry_msgs/Twist" required="false" />
+            <input type="ros_topic" name="input_angular" message_type="geometry_msgs/Twist" required="false" />
+        </inputs>
+        <outputs>
+            <output type="ros_topic" name="merged_output" message_type="geometry_msgs/Twist" />
+        </outputs>
+    </executable>
+
+</module>
