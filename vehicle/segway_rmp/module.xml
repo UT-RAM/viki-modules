@@ -1,0 +1,32 @@
+<!--AEROWORKS-->
+<module type="vehicle" id="segway_rmp">
+    <meta>
+        <name>Segway RMP USB</name>
+        <author>Robin Hoogervorst</author>
+        <icon>glyphicon-asterisk</icon>
+        <description>
+            Wrapper for the segway rmp package
+        </description>
+    </meta>
+
+    <!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
+    <inputs>
+        <input type="ros_topic" name="cmd_vel" link="segway_rmp/cmd_vel" message_type="geometry_msgs/Twist" required="true" />
+    </inputs>
+
+    <executable id="segway_rmp" pkg="segway_rmp" exec="segway_rmp_node">
+        <inputs>
+            <input type="ros_topic" name="image" message_type="sensor_msgs/Image" required="true" />
+        </inputs>
+
+        <params>
+            <param name="interface_type" type="string" default="usb" />
+            <param name="usb_selector" type="string" default="index" />
+            <param name="usb_index" type="integer" default="0" />
+
+            <param name="rmp_type" type="string" default="50/100" />
+
+        </params>
+
+    </executable>
+</module>
