@@ -11,7 +11,7 @@
 		<output type="ros_topic" name="setpoint" link="setpoint_node/setpoint" message_type="geometry_msgs/Pose" required="true" />
 	</outputs>
 
-	<executable id="setpoint_node" pkg="setpoint" exec="setpoint_node">
+	<executable id="setpoint_node" pkg="setpoint" exec="setpoint_node" args="/setpoint_node/pose">
 		<outputs>
 			<output type="ros_topic" name="setpoint" message_type="geometry_msgs/Pose" required="false" />
 		</outputs>

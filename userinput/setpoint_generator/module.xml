@@ -10,7 +10,7 @@
     </meta>
 
     <outputs>
-        <output type="ros_topic" name="setpoint" link="setpoint_generator/setpoint" message_type="geometry_msgs/Pose" required="true" />
+        <output type="ros_topic" name="setpoint" link="setpoint_generator/viki_setpoint" message_type="geometry_msgs/Pose" required="true" />
     </outputs>
 
     <executable id="setpoint_generator" pkg="ram_viki_setpoint" exec="setpoint_generator">
