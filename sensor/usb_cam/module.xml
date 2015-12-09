@@ -25,7 +25,7 @@
         </params>
 
         <outputs>
-            <output type="ros_topic" name="image" message_type="sensor_msgs/Image" required="false" />
+            <output type="ros_topic" name="image_raw" message_type="sensor_msgs/Image" required="false" />
         </outputs>
     </executable>
 </module>
