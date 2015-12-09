@@ -145,8 +145,8 @@ public:
         camera_roll   = 0 ;
 
         // ROS subscribers / publishers
-        image_sub     = n.subscribe(ns+"/image", 1, &PoseEstimator::imageCallback, this);
-        pos_sub       = n.subscribe(ns+"/pose", 1, &PoseEstimator::poseCallback, this);
+        image_sub     = n.subscribe("image", 1, &PoseEstimator::imageCallback, this);
+        pos_sub       = n.subscribe("pose", 1, &PoseEstimator::poseCallback, this);
 
         pose_pub      = n.advertise<geometry_msgs::PoseStamped>(ns+"/output_pose", 1);
 
