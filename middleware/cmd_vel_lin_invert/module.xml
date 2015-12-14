@@ -1,0 +1,35 @@
+<!-- AEROWORKS -->
+
+<!-- 
+    Module to invert the linear values of a cmd_vel message,
+    originally created for use in the demo for VIKI
+-->
+<module type="middleware" id="cmd_vel_lin_invert">
+
+    <meta>
+        <name>cmd_vel lin invert</name>
+        <description>
+            Invert the linear values of the cmd_vel command
+        </description>
+        <author>Robin Hoogervorst</author>
+        <icon>glyphicon-random</icon>
+    </meta>
+
+    <inputs>
+        <input type="ros_topic" name="input_linear" link="cmd_vel_lin_invert/cmd_vel_input" message_type="geometry_msgs/Twist" required="false" />
+    </inputs>
+
+    <outputs>
+        <output type="ros_topic" name="out" link="cmd_vel_lin_invert/cmd_vel" message_type="geometry_msgs/Twist" required="false" />
+    </outputs>
+
+    <executable id="cmd_vel_lin_invert" pkg="cmd_vel_lin_invert" exec="lin_invert.py">
+        <inputs>
+            <input type="ros_topic" name="cmd_vel_input" message_type="geometry_msgs/Twist" required="false" />
+        </inputs>
+        <outputs>
+            <output type="ros_topic" name="cmd_vel" message_type="geometry_msgs/Twist" />
+        </outputs>
+    </executable>
+
+</module>
