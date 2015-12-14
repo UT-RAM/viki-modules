@@ -3,7 +3,7 @@
     <meta>
         <name>Marker Detection</name>
         <author>Robin Hoogervorst</author>
-        <description>Estimates the total odom nav msg, from a pose</description>
+        <description>Detect a marker from a camera image</description>
         <icon>glyphicon-qrcode</icon>
     </meta>
 
