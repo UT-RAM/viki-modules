@@ -16,7 +16,7 @@
 
     <executable id="segway_rmp" pkg="segway_rmp" exec="segway_rmp_node">
         <inputs>
-            <input type="ros_topic" name="/cmd_vel" message_type="sensor_msgs/Image" required="true" />
+            <input type="ros_topic" name="cmd_vel" message_type="sensor_msgs/Image" required="true" namespace="private" />
         </inputs>
 
         <params>
