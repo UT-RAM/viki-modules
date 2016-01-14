@@ -9,6 +9,10 @@
 		<icon>glyphicon-globe</icon>
 	</meta>
 
+	<dependencies>
+		<depends>mocap_optitrack</depends>
+	</dependencies>
+
 	<!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
 	<outputs>
 		<output type="ros_topic" name="pose1" link="/optitrack/pose1" message_type="geometry_msgs/PoseStamped" required="true" />

@@ -10,6 +10,10 @@
         </description>
     </meta>
 
+    <dependencies>
+        <depends>libuvc_camera</depends>
+    </dependencies>
+
     <!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
     <outputs>
         <output type="ros_topic" name="image" link="usb_cam/image_raw" message_type="sensor_msgs/Image" required="true" />
