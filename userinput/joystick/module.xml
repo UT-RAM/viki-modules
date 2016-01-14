@@ -8,6 +8,11 @@
 		<author>C. Trouwborst/A. Kamphuis</author>
 	</meta>
 
+	<dependencies>
+		<depends>twist_from_joy</depends>
+		<depends>joy</depends>
+	</dependencies>
+
 	<!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
 	<outputs>
 		<output type="ros_topic" name="cmd_vel_joy" link="twist_from_joy/cmd_vel_joy" message_type="geometry_msgs/Twist" required="true" />

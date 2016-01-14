@@ -8,7 +8,12 @@
         </description>
     </meta>
 
-    <!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
+    <dependencies>
+        <depends>rqt_plot</depends>
+    </dependencies>
+
+
+        <!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
     <inputs>
         <input type="ros_topic" name="pose_input" link="rqt_plot/pose_input" message_type="geometry_msgs/Pose" required="true" />
     </inputs>

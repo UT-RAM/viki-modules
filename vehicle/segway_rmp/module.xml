@@ -9,6 +9,10 @@
         </description>
     </meta>
 
+    <dependencies>
+        <depends>segway_rmp</depends>
+    </dependencies>
+
     <!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
     <inputs>
         <input type="ros_topic" name="cmd_vel" link="segway_rmp/cmd_vel" message_type="geometry_msgs/Twist" required="true" />

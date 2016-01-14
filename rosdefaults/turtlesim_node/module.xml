@@ -9,6 +9,10 @@
         <author>ros.org</author>
     </meta>
 
+    <dependencies>
+        <depends>turtlesim</depends>
+    </dependencies>
+
     <inputs>
         <input type="ros_topic" name="cmd_vel" message_type="geometry_msgs/Twist" required="true" link="turtlenode/turtle1/cmd_vel" />
     </inputs>

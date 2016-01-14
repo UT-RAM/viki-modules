@@ -7,6 +7,10 @@
         <icon>glyphicon-qrcode</icon>
     </meta>
 
+    <dependencies>
+        <depends>marker_detection</depends>
+    </dependencies>
+
     <inputs>
         <input type="ros_topic" name="image" link="marker_detection_node/image" message_type="sensor_msgs/Image" required="true" />
         <input type="ros_topic" name="pose" link="marker_detection_node/pose" message_type="geometry_msgs/PoseStamped" required="false" />

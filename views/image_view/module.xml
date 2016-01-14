@@ -9,6 +9,10 @@
         </description>
     </meta>
 
+    <dependencies>
+        <depends>image_view</depends>
+    </dependencies>
+
     <!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
     <inputs>
         <input type="ros_topic" name="image_view_input" link="image_view/image" message_type="sensor_msgs/Image" required="true" />
