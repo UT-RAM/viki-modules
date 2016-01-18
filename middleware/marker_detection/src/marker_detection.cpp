@@ -91,7 +91,8 @@ private:
 
 public:
     PoseEstimator() {
-        ros::NodeHandle n("~");
+        ros::NodeHandle private_nhandle("~");
+        ros::NodeHandle nhandle();
         seqId = 0;
 
         string ns = ros::this_node::getNamespace();
@@ -99,13 +100,13 @@ public:
         // Start reading parameters
         window_name = "Camera pose estimator";
 
-        if (!n.getParam("camera_offset_x", camera_offset_x)) {
+        if (!private_nhandle.getParam("camera_offset_x", camera_offset_x)) {
             camera_offset_x = 0;
         };
 
         // Get the calibration file setting
         std::string calibration_file;
-        if (!n.getParam("camera_calibration", calibration_file)) {
+        if (!private_nhandle.getParam("camera_calibration", calibration_file)) {
           ROS_WARN("No valid camera calibration file specified, shutting down");
           ros::shutdown();
         }
@@ -113,7 +114,7 @@ public:
         // Get a detector using the factory and the calibration filename
         string detector_name;
         DetectorFactory* dFactory = new DetectorFactory();
-        if (n.getParam("detector", detector_name)) {
+        if (private_nhandle.getParam("detector", detector_name)) {
             detector = dFactory->get(detector_name, calibration_file);
             if (detector == NULL) {
                 ROS_WARN("We could not generate a valid detector with name %s", detector_name.c_str());
@@ -121,11 +122,10 @@ public:
             }
 
             double tagsize;
-            if (n.getParam("tagsize", tagsize)) {
+            if (private_nhandle.getParam("tagsize", tagsize)) {
                 detector->setDouble("tagsize", tagsize);
             }
         }
-
 
         image_time = ros::Time::now();
 
@@ -145,10 +145,10 @@ public:
         camera_roll   = 0 ;
 
         // ROS subscribers / publishers
-        image_sub     = n.subscribe("image", 1, &PoseEstimator::imageCallback, this);
-        pos_sub       = n.subscribe("pose", 1, &PoseEstimator::poseCallback, this);
+        image_sub     = nhandle.subscribe("image", 1, &PoseEstimator::imageCallback, this);
+        pos_sub       = nhandle.subscribe("pose", 1, &PoseEstimator::poseCallback, this);
 
-        pose_pub      = n.advertise<geometry_msgs::PoseStamped>(ns+"/output_pose", 1);
+        pose_pub      = nhandle.advertise<geometry_msgs::PoseStamped>("output_pose", 1);
 
         // Dynamic reconfigure settings
         f = boost::bind(&PoseEstimator::reconfigure, this, _1, _2);
