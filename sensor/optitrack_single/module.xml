@@ -10,7 +10,7 @@
 	</meta>
 
 	<dependencies>
-		<depends>mocap_optitrack</depends>
+		<depends type="git" src="https://github.com/ros-drivers/mocap_optitrack">mocap_optitrack</depends>
 	</dependencies>
 
 	<!-- The in- and outputs of the module as a whole. They are linked to specific executables within the module -->
