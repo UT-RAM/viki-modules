@@ -71,7 +71,7 @@ private:
 
     ros::Time image_time;
 
-    ros::NodeHandle n;
+    ros::NodeHandle nhandle;
     ros::Subscriber image_sub;
     ros::Subscriber pos_sub;
 
@@ -92,7 +92,6 @@ private:
 public:
     PoseEstimator() {
         ros::NodeHandle private_nhandle("~");
-        ros::NodeHandle nhandle();
         seqId = 0;
 
         string ns = ros::this_node::getNamespace();
