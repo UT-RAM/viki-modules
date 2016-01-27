@@ -1,4 +1,0 @@
-# this file includes packages for installation for use of these modules
-
-- git: {local-name: "apriltags", uri: "https://github.com/RIVeR-Lab/apriltags_ros", version: indigo-devel}
-- git: {local-name: "mocap-optitrack", uri: "https://github.com/ros-drivers/mocap_optitrack"}
