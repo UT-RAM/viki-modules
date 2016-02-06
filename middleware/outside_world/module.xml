@@ -1,0 +1,27 @@
+<!-- AEROWORKS -->
+<module type="middleware" id="outside_world">
+	<meta>
+		<name>Outside world module</name>
+		<description>A module to connect to non VIKI topics. Start the node with two arguments: the first argument is either INPUT or OUTPUT, indicating that this module should subscribe (INPUT) or publish (OUTPUT) to this topic. The second argument is the name of the topic to subscribe to.</description>
+		<author>Alex Kamphuis</author>
+		<icon>glyphicon-log-out</icon>
+	</meta>
+
+	<inputs>
+		<input type="ros_topic" name="input" link="outside_world/input" message_type="ANY" required="false" />
+	</inputs>
+
+	<outputs>
+		<output type="ros_topic" name="output" link="outside_world/output" message_type="ANY" required="false" />
+	</outputs>
+
+	<executable id="outside_world" pkg="outside_world" exec="outside_world">
+		<inputs>
+			<input type="ros_topic" name="input" message_type="ANY" required="false" />
+		</inputs>
+		<outputs>
+			<output type="ros_topic" name="output" message_type="ANY" />
+		</outputs>
+	</executable>
+
+</module>
