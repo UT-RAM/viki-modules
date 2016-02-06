@@ -119,7 +119,7 @@ int main(int argc, char **argv)
 	}
 
 	std::string topic_name;
-	if(!getBaseName(string(argv[2]), topic_name)){return 1;}
+	topic_name = string(argv[2]);
 
 	ros::init(argc, argv, topic_name + string("_relay"),
 		ros::init_options::AnonymousName);
