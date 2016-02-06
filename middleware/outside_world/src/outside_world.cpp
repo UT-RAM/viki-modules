@@ -128,6 +128,7 @@ int main(int argc, char **argv)
 	   ros::console::notifyLoggerLevelsChanged();
 	}
 
+	topic_name.insert(0, "/");
 	ROS_INFO("Topic name: %s", topic_name.c_str());
 
 	if (string(argv[1]) == "INPUT"){ROS_DEBUG("Type is input."); MODE = INPUT;}
