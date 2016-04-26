@@ -1,8 +1,13 @@
-<!-- AEROWORKS -->
+<!-- VIKI_MODULE -->
 <module type="middleware" id="outside_world">
 	<meta>
 		<name>Outside world module</name>
-		<description>A module to connect to non VIKI topics. Start the node with two arguments: the first argument is either INPUT or OUTPUT, indicating that this module should subscribe (INPUT) or publish (OUTPUT) to this topic. The second argument is the name of the topic to subscribe to.</description>
+		<description>
+			A module to connect to non VIKI topics.
+			Start the node with two arguments: the first argument is either INPUT or OUTPUT,
+			indicating that this module should subscribe (INPUT) or publish (OUTPUT) to
+			this topic. The second argument is the name of the topic to subscribe to.
+		</description>
 		<author>Alex Kamphuis</author>
 		<icon>glyphicon-log-out</icon>
 	</meta>
