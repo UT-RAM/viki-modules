@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="vehicle" id="parrot">
 	<meta>
 		<name>Parrot A.R. Drone</name>
@@ -37,8 +37,8 @@
 		</inputs>
 
 		<params>
-			<param name="leds" default="2" type="realnumber" />
-			<param name="test" default="3" type="integer" />
+			<param name="leds" default="2" type="int" />
+			<param name="test" default="3" type="int" />
 		</params>
 	</executable>
 </module>

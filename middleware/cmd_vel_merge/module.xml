@@ -1,4 +1,4 @@
-<!-- AEROWORKS -->
+<!-- VIKI_MODULE -->
 
 <!-- 
 This module file enables the command vel merge package. Package is included in the same folder as this file. Symlink it to your catkin workspace and catkin_make to run it.

@@ -1,0 +1,30 @@
+<!-- VIKI_MODULE -->
+<module type="sensor" id="vi_sensor">
+
+    <meta>
+        <name>VI-sensor</name>
+        <description>VI-sensor</description>
+        <author>Tjark Post</author>
+    </meta>
+
+    <dependencies>
+        <depends>visensor_node</depends>
+        <depends>libvisensor</depends>
+    </dependencies>
+
+    <outputs>
+        <output type="ros_topic" name="cam0" link="vi_sensor/cam0/image_raw" message_type="sensor_msgs/Image" required="false" />
+        <output type="ros_topic" name="cam1" link="vi_sensor/cam1/image_raw" message_type="sensor_msgs/Image" required="false" />
+        <output type="ros_topic" name="imu" link="vi_sensor/imu0" message_type="sensor_msgs/Imu" required="false" />
+    </outputs>
+
+    <executable id="vi_sensor" pkg="visensor_node" exec="visensor_node">
+        <outputs>
+            <output type="ros_topic" name="cam0/image_raw" message_type="sensor_msgs/Image" required="false" />
+            <output type="ros_topic" name="cam1/image_raw" message_type="sensor_msgs/Image" required="false" />
+            <output type="ros_topic" name="imu0" message_type="sensor_msgs/Imu" required="false" />
+        </outputs>
+    </executable>
+
+
+</module>

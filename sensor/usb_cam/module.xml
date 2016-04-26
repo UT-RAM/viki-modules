@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="sensor" id="camera_source">
 
     <meta>
@@ -21,11 +21,11 @@
 
     <executable id="usb_cam" pkg="libuvc_camera" exec="camera_node">
         <params>
-            <param name="vendor" type="string" default="null" />
-            <param name="product" type="string" default="null" />
-            <param name="width" type="string" default="640" />
-            <param name="height" type="string" default="480" />
-            <param name="frame_rate" type="string" default="15.0" />
+            <param name="vendor" type="str" default="null" />
+            <param name="product" type="str" default="null" />
+            <param name="width" type="str" default="640" />
+            <param name="height" type="str" default="480" />
+            <param name="frame_rate" type="str" default="15.0" />
         </params>
 
         <outputs>

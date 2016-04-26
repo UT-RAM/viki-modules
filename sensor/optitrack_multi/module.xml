@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="sensor" id="optitrack_multi">
 	<meta>
 		<name>OptiTrack (5 outputs)</name>
@@ -24,11 +24,11 @@
 
 	<executable id="mocap_node" pkg="mocap_optitrack" exec="mocap_node">
 		<params>
-			<param name="rigid_bodies/1/pose" type="string" default="/optitrack/pose1" />
-			<param name="rigid_bodies/2/pose" type="string" default="/optitrack/pose2" />
-			<param name="rigid_bodies/3/pose" type="string" default="/optitrack/pose3" />
-			<param name="rigid_bodies/4/pose" type="string" default="/optitrack/pose4" />
-			<param name="rigid_bodies/5/pose" type="string" default="/optitrack/pose5" />
+			<param name="rigid_bodies/1/pose" type="str" default="/optitrack/pose1" />
+			<param name="rigid_bodies/2/pose" type="str" default="/optitrack/pose2" />
+			<param name="rigid_bodies/3/pose" type="str" default="/optitrack/pose3" />
+			<param name="rigid_bodies/4/pose" type="str" default="/optitrack/pose4" />
+			<param name="rigid_bodies/5/pose" type="str" default="/optitrack/pose5" />
 		</params>
 	</executable>
 </module>

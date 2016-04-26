@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="userinput" id="setpoint_generator">
     <meta>
         <name>Setpoint generator</name>
@@ -19,8 +19,8 @@
         </outputs>
 
         <params>
-            <param name="period_time" default="10" type="float" />
-            <param name="period_phase_shift_time" default="0"  type="float"/>
+            <param name="period_time" default="10" type="int" />
+            <param name="period_phase_shift_time" default="0"  type="int"/>
         </params>
     </executable>
 

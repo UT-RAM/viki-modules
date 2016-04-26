@@ -1,4 +1,4 @@
-<!-- AEROWORKS -->
+<!-- VIKI_MODULE -->
 
 <!-- 
     Module to invert the linear values of a cmd_vel message,

@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 
 <!-- downloaded from: https://github.com/ros-teleop/teleop_twist_keyboard -->
 <module type="userinput" id="keyboard">

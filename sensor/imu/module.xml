@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="sensor" id="imu">
 	<meta>
 		<name>IMU</name>

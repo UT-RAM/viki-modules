@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="vehicle" id="segway_rmp">
     <meta>
         <name>Segway RMP USB</name>
@@ -24,11 +24,11 @@
         </inputs>
 
         <params>
-            <param name="interface_type" type="string" default="usb" />
-            <param name="usb_selector" type="string" default="index" />
-            <param name="usb_index" type="integer" default="0" />
+            <param name="interface_type" type="str" default="usb" />
+            <param name="usb_selector" type="str" default="index" />
+            <param name="usb_index" type="int" default="0" />
 
-            <param name="rmp_type" type="string" default="50/100" />
+            <param name="rmp_type" type="str" default="50/100" />
         </params>
     </executable>
 </module>

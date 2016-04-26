@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="controller" id="easyPID">
 	<meta>
 		<name>Easy PID</name>

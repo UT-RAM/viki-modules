@@ -1,4 +1,4 @@
-<!-- AEROWORKS -->
+<!-- VIKI_MODULE -->
 <module type="middleware" id="middle_posestamped_odom">
     <meta>
         <name>PoseStamped -> Odom</name>

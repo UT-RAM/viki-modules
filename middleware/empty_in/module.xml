@@ -1,4 +1,4 @@
-<!-- AEROWORKS -->
+<!-- VIKI_MODULE -->
 <module type="middleware" id="empty_in">
     <meta>
         <name>Empty input module</name>

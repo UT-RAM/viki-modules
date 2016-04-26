@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 <module type="view" id="pose_plot">
     <meta>
         <name>Pose plot</name>

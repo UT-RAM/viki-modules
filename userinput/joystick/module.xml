@@ -1,4 +1,4 @@
-<!--AEROWORKS-->
+<!-- VIKI_MODULE -->
 
 <!-- This modules is based on ROS packages that you should get using apt-get, and therefore we do not implement the source within the framework. If you do not have these package yet you can get it by opening a console and running 'sudo apt-get install ros-indigo-joy'-->
 <module type="userinput" id="joystick">

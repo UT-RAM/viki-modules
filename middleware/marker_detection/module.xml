@@ -1,4 +1,4 @@
-<!-- AEROWORKS -->
+<!-- VIKI_MODULE -->
 <module type="middleware" id="marker_detection">
     <meta>
         <name>Marker Detection</name>
@@ -31,8 +31,8 @@
         </outputs>
 
         <params>
-            <param name="detector" type="string" default="APRIL" />
-            <param name="camera_calibration" type="string" default="$(find marker_detection)/calibration/20150401_buildin_hp.xml" />
+            <param name="detector" type="str" default="APRIL" />
+            <param name="camera_calibration" type="str" default="$(find marker_detection)/calibration/20150401_buildin_hp.xml" />
             <param name="camera_offset_x" type="double" default="0"  />
             <param name="tagsize" type="double" default="0.0456" />
         </params>
